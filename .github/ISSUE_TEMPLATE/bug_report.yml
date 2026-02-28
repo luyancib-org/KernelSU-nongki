@@ -8,6 +8,7 @@ body:
        label: Please check before submitting an issue
        options:
           - label: I have searched the issues and haven't found anything relevant
+            description: [test](https://kernelsu.org)
             required: true
             
           - label: I will upload bugreport file in KernelSU Manager - Settings - Report log
