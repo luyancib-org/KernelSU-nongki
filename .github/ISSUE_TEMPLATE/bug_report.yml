@@ -8,6 +8,7 @@ body:
        label: Please check before submitting an issue
        options:
           - label: I have read the documents, and haven't found anything relevant
+            description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
             required: true
 
           - label: I have searched the issues and haven't found anything relevant
