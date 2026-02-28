@@ -7,16 +7,22 @@ body:
     attributes:
        label: Please check before submitting an issue
        options:
-          - label: I have searched the issues and haven't found anything relevant
-            description: [test](https://kernelsu.org)
+          - label: I have read the documents, and haven't found anything relevant
+            description: Please check [official docs](https://kernelsu.org) first
             required: true
-            
-          - label: I will upload bugreport file in KernelSU Manager - Settings - Report log
-            required: true
-            
-          - label: I know how to reproduce the issue which may not be specific to my device
-            required: false
 
+          - label: I have searched the issues and haven't found anything relevant
+            description: Search both **open** and **closed** issues before posting
+            required: true
+
+          - label: I will upload bugreport file in KernelSU Manager - Settings - Report log
+            description: |
+              A full `bugreport.tar.gz` is **required** for debugging kernel/root issues.
+            required: true
+
+          - label: I know how to reproduce the issue which may not be specific to my device
+            description: The issue can be **stably reproduced**, not random or device-unique
+            required: false
 
   - type: textarea
     attributes:
@@ -24,37 +30,30 @@ body:
         description: A clear and concise description of what the bug is
     validations:
         required: true
-      
 
   - type: textarea
     attributes:
         label: To Reproduce
         description: Steps to reproduce the behaviour
         placeholder: |
-          - 1. Go to '...'
-          - 2. Click on '....'
-          - 3. Scroll down to '....'
-          - 4. See error
-          
+          1. Go to '...'
+          2. Click on '....'
+          3. See error
 
   - type: textarea
     attributes:
         label: Expected behavior
-        description: A clear and concise description of what you expected to happen.
-    
-    
+        description: What you expected to happen.
+
   - type: textarea
     attributes:
-        label: Screenshots
-        description: If applicable, add screenshots to help explain your problem.
-        
-        
+        label: Screenshots / recordings
+
   - type: textarea
     attributes:
         label: Logs
-        description: If applicable, add crash or any other logs to help us figure out the problem.
-        
-        
+        description: Logcat, dmesg, crash logs, etc.
+
   - type: textarea
     attributes:
         label: Device info
@@ -66,8 +65,6 @@ body:
     validations:
         required: true
 
-
   - type: textarea
     attributes:
         label: Additional context
-        description: Add any other context about the problem here.
